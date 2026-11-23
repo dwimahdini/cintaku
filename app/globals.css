@@ -1,4 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body { background: #09090b; color: #fafafa; }
+
+body { background: #0b0b10; color: #fafafa; }
+::selection { background: #f43f5e; color: #fff; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
