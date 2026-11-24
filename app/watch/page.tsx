@@ -31,6 +31,17 @@ function WatchInner() {
   const id = sp.get('id') || '';
   const ep = parseInt(sp.get('ep') || '1', 10) || 1;
   const [state, setState] = useState<{ loading: boolean; src: string; error: string }>({ loading: true, src: '', error: '' });
+  const [title, setTitle] = useState('');
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch(`/api/detail?provider=${provider}&id=${id}`);
+        const json = await res.json();
+        if (json.drama?.title) setTitle(json.drama.title);
+      } catch { /* judul tetap kosong, halaman tetap bisa dipakai */ }
+    })();
+  }, [provider, id]);
 
   useEffect(() => {
     (async () => {
@@ -47,7 +58,8 @@ function WatchInner() {
   return (
     <div className="mx-auto max-w-3xl">
       <Link href={`/drama?provider=${provider}&id=${id}`} className="text-sm font-medium text-zinc-400 transition hover:text-white">← Semua Episode</Link>
-      <h1 className="mt-4 text-2xl font-extrabold sm:text-3xl">Episode {ep}</h1>
+      {title && <h1 className="mt-4 text-2xl font-extrabold sm:text-3xl">{title}</h1>}
+      <p className="mt-1 text-lg font-bold text-white">Episode {ep}</p>
       <p className="mt-1 text-sm text-zinc-400">Subtitle Indonesia • Tonton langsung di browser</p>
 
       {state.loading ? (
