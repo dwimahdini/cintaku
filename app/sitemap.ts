@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getPopular } from '@/lib/apishort';
 
-const BASE = 'https://cintaku-gules.vercel.app';
+const BASE = 'https://cintaku.media21.web.id';
 
 export const revalidate = 3600;
 

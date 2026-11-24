@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE = 'https://cintaku-gules.vercel.app';
+const BASE = 'https://cintaku.media21.web.id';
 
 export default function robots(): MetadataRoute.Robots {
   return {

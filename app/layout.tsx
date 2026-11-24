@@ -3,13 +3,13 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 export const metadata = {
-  metadataBase: new URL('https://cintaku-gules.vercel.app'),
+  metadataBase: new URL('https://cintaku.media21.web.id'),
   title: 'Cintaku — Nonton Drama China Sub Indo',
   description: 'Nonton drama China pendek sub Indo. Romansa, CEO, balas dendam, dan kisah cinta lainnya — gratis, langsung di browser.',
   openGraph: {
     title: 'Cintaku — Nonton Drama China Sub Indo',
     description: 'Nonton drama China pendek sub Indo. Romansa, CEO, balas dendam, dan kisah cinta lainnya — gratis, langsung di browser.',
-    url: 'https://cintaku-gules.vercel.app',
+    url: 'https://cintaku.media21.web.id',
     siteName: 'Cintaku',
     type: 'website',
     locale: 'id_ID',
