@@ -3,6 +3,7 @@ import { Suspense, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import VideoPlayer from '@/components/VideoPlayer';
+import { NativeBanner } from '@/components/Adsterra';
 
 function findStreamUrl(data: any): string {
   if (!data) return '';
@@ -87,6 +88,8 @@ function WatchInner() {
           <Link href={`/watch?provider=${provider}&id=${id}&ep=${ep + 1}`} className="rounded-full bg-rose-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-600">Episode {ep + 1} →</Link>
         </div>
       )}
+
+      <NativeBanner />
     </div>
   );
 }

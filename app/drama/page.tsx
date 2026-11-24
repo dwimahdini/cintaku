@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Banner300 } from '@/components/Adsterra';
 import { getDetail } from '@/lib/apishort';
 
 export const revalidate = 3600;
@@ -70,6 +71,8 @@ export default async function DramaPage({ searchParams }: { searchParams: { prov
         </div>
         {total > 100 && <p className="mt-3 text-xs text-zinc-500">Ditampilkan 100 episode pertama.</p>}
       </section>
+
+      <Banner300 />
     </div>
   );
 }
