@@ -2,7 +2,7 @@ import { getPopular } from '@/lib/apishort';
 
 const BASE = 'https://cintaku.media21.web.id';
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 // Sitemap dibuat manual sebagai XML agar karakter '&' di URL drama
 // di-escape menjadi '&amp;' — wajib di XML. Versi sebelumnya memakai
