@@ -52,6 +52,10 @@ export default async function DramaPage({ searchParams }: { searchParams: { prov
       <section className="mt-8 max-w-3xl">
         <h2 className="text-xl font-extrabold">Sinopsis</h2>
         <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">{drama.summary || drama.overview || 'Sinopsis belum tersedia untuk judul ini.'}</p>
+        <div className="mt-6 rounded-2xl bg-amber-400/10 p-4 ring-1 ring-amber-400/30 sm:flex sm:items-center sm:justify-between sm:gap-4">
+          <p className="text-sm text-amber-100">Suka nonton di Cintaku? Dukung kami supaya situs ini tetap gratis. ☕</p>
+          <a href="https://saweria.co/berbagiKebaikan12" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block shrink-0 rounded-full bg-amber-400 px-5 py-2 text-sm font-bold text-black transition hover:bg-amber-300 sm:mt-0">Dukung lewat Saweria</a>
+        </div>
       </section>
 
       <section className="mt-10">

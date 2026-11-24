@@ -31,7 +31,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <nav className="flex items-center gap-1 text-sm font-medium text-zinc-300">
               <Link href="/" className="rounded-full px-3 py-1.5 hover:bg-white/10 hover:text-white">Beranda</Link>
               <Link href="/#trending" className="rounded-full px-3 py-1.5 hover:bg-white/10 hover:text-white">Trending</Link>
-              <Link href="/#cari" className="rounded-full bg-rose-500 px-4 py-1.5 text-white shadow-lg shadow-rose-500/30 hover:bg-rose-600">Cari Drama</Link>
+              <Link href="/#cari" className="rounded-full px-3 py-1.5 hover:bg-white/10 hover:text-white">Cari Drama</Link>
+              <a href="https://saweria.co/berbagiKebaikan12" target="_blank" rel="noopener noreferrer" className="rounded-full bg-amber-400 px-4 py-1.5 font-bold text-black shadow-lg shadow-amber-400/20 transition hover:bg-amber-300">☕ Dukung</a>
             </nav>
           </div>
         </header>
@@ -42,6 +43,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-400">
               Nonton drama China pendek dengan subtitle Indonesia, langsung di browser — tanpa aplikasi, tanpa ribet.
               Semua judul ditayangkan dari platform penyedia kontennya.
+            </p>
+            <p className="mt-5">
+              <a href="https://saweria.co/berbagiKebaikan12" target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-black shadow-lg shadow-amber-400/20 transition hover:bg-amber-300">☕ Dukung Cintaku lewat Saweria</a>
             </p>
             <p className="mt-4 text-xs text-zinc-500">© 2026 Cintaku. Semua judul dan poster adalah milik pembuatnya masing-masing.</p>
           </div>
