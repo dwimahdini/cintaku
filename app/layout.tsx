@@ -3,8 +3,18 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 export const metadata = {
+  metadataBase: new URL('https://cintaku-gules.vercel.app'),
   title: 'Cintaku — Nonton Drama China Sub Indo',
   description: 'Nonton drama China pendek sub Indo. Romansa, CEO, balas dendam, dan kisah cinta lainnya — gratis, langsung di browser.',
+  openGraph: {
+    title: 'Cintaku — Nonton Drama China Sub Indo',
+    description: 'Nonton drama China pendek sub Indo. Romansa, CEO, balas dendam, dan kisah cinta lainnya — gratis, langsung di browser.',
+    url: 'https://cintaku-gules.vercel.app',
+    siteName: 'Cintaku',
+    type: 'website',
+    locale: 'id_ID',
+  },
+  twitter: { card: 'summary_large_image', title: 'Cintaku — Nonton Drama China Sub Indo', description: 'Nonton drama China pendek sub Indo, gratis langsung di browser.' },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
