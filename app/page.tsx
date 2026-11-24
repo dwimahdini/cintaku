@@ -85,8 +85,6 @@ export default async function Home({ searchParams }: { searchParams: { q?: strin
         </div>
       </section>
 
-      {!q && <NativeBanner />}
-
       {error && (
         <div className="mt-10 rounded-3xl bg-white/5 p-8 text-center ring-1 ring-white/10">
           <p className="text-3xl">😔</p>
@@ -116,6 +114,7 @@ export default async function Home({ searchParams }: { searchParams: { q?: strin
             {trending.map((d) => <DramaCard key={`${d.id}`} drama={d} provider="shortmax" />)}
           </div>
           <Banner300 />
+          <NativeBanner />
         </section>
       )}
     </div>
