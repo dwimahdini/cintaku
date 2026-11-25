@@ -6,3 +6,17 @@ body { background: #0b0b10; color: #fafafa; }
 ::selection { background: #f43f5e; color: #fff; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
+
+/* Mode scroll /feed: snap vertikal per episode, scroll feed tidak menarik
+   halaman di belakangnya, scrollbar disembunyikan. */
+.feed-scroll { scroll-snap-type: y mandatory; overscroll-behavior: contain; scrollbar-width: none; }
+.feed-scroll::-webkit-scrollbar { display: none; }
+
+/* Animasi hati saat ketuk 2x (suka) di feed. */
+@keyframes feed-heart-pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  25% { transform: scale(1.25); opacity: 1; }
+  60% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.feed-heart-pop { animation: feed-heart-pop 0.8s ease-out forwards; }

@@ -44,6 +44,7 @@ export default async function DramaPage({ searchParams }: { searchParams: { prov
             )}
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href={`/watch?provider=${provider}&id=${drama.id}&ep=1`} className="rounded-full bg-rose-500 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-rose-500/30 transition hover:bg-rose-600">▶ Tonton Episode 1</Link>
+              <Link href={`/feed?provider=${provider}&id=${drama.id}&ep=1`} className="rounded-full bg-white/10 px-6 py-3 text-sm font-bold text-white ring-1 ring-white/20 transition hover:bg-white/20">↕ Mode Scroll</Link>
               <Link href="/" className="rounded-full bg-white/10 px-6 py-3 text-sm font-bold text-white ring-1 ring-white/20 transition hover:bg-white/20">← Beranda</Link>
             </div>
           </div>
